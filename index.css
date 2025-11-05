@@ -1,0 +1,96 @@
+/* ==== CONFIGURACIÓN GENERAL ==== */
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== HEADER ==== */
+header {
+  background: linear-gradient(90deg, #0d1117, #161b22, #1f6feb);
+  color: #e6edf3;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(31, 111, 235, 0.3);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #58a6ff;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #8b949e;
+}
+
+/* ==== NAV ==== */
+nav {
+  background-color: #161b22;
+  text-align: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #30363d;
+}
+
+nav a {
+  color: #58a6ff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #1f6feb;
+  text-shadow: 0 0 8px #58a6ff;
+}
+
+/* ==== TITULOS ==== */
+h2 {
+  color: #58a6ff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-left: 4px solid #1f6feb;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* ==== TARJETAS ==== */
+.card {
+  background-color: #161b22;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: #161b22;
+  color: #8b949e;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 50px;
+  border-top: 1px solid #30363d;
+  font-size: 0.9rem;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+}
