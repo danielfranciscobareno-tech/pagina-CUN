@@ -1,62 +1,55 @@
 /* ==== CONFIGURACIÓN GENERAL ==== */
 body {
-  background-color: #0d1117;
+  background-color: #0a0f1a;
   color: #e6edf3;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+/* ==== EFECTO TITULO ==== */
+.glow-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #58a6ff;
+  text-shadow: 0 0 10px #58a6ff, 0 0 20px #1f6feb;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 8px #58a6ff, 0 0 16px #1f6feb; }
+  to { text-shadow: 0 0 20px #58a6ff, 0 0 40px #1f6feb; }
 }
 
 /* ==== HEADER ==== */
 header {
-  background: linear-gradient(90deg, #0d1117, #161b22, #1f6feb);
-  color: #e6edf3;
-  text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 4px 10px rgba(31, 111, 235, 0.3);
-}
-
-header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #58a6ff;
-}
-
-header p {
-  font-size: 1.1rem;
-  color: #8b949e;
+  background: radial-gradient(circle at center, #0d1117, #0a0f1a);
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 20px rgba(31, 111, 235, 0.3);
 }
 
 /* ==== NAV ==== */
 nav {
   background-color: #161b22;
   text-align: center;
-  padding: 0.8rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid #30363d;
 }
 
 nav a {
   color: #58a6ff;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px;
   font-weight: 500;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   color: #1f6feb;
-  text-shadow: 0 0 8px #58a6ff;
-}
-
-/* ==== TITULOS ==== */
-h2 {
-  color: #58a6ff;
-  font-size: 1.3rem;
-  font-weight: 600;
-  border-left: 4px solid #1f6feb;
-  padding-left: 10px;
-  margin-bottom: 15px;
+  text-shadow: 0 0 10px #58a6ff;
+  transform: scale(1.05);
 }
 
 /* ==== TARJETAS ==== */
@@ -64,13 +57,33 @@ h2 {
   background-color: #161b22;
   color: #e6edf3;
   border: 1px solid #30363d;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+.card-glow:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.25);
+}
+
+/* ==== TITULOS ==== */
+h2 {
+  color: #58a6ff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-left: 4px solid #1f6feb;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* ==== ANIMACIÓN APARICIÓN ==== */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==== FOOTER ==== */
@@ -82,15 +95,21 @@ footer {
   margin-top: 50px;
   border-top: 1px solid #30363d;
   font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  .glow-text {
+    font-size: 2.3rem;
   }
+
   nav a {
     display: inline-block;
-    margin: 8px;
+    margin: 10px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
   }
 }

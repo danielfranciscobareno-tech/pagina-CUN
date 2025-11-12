@@ -1,113 +1,134 @@
-/* Paleta: oscuro + azul-cian + morado (coherente con index y página Intel) */
-:root {
-  --bg: #0d1117;
-  --panel: #161b22;
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --accent: #58a6ff;
-  --accent-2: #b388ff;
-  --card-border: #30363d;
-  --glow: rgba(179, 136, 255, 0.25);
-}
-
-/* BASE */
+/* ==== CONFIGURACIÓN GENERAL ==== */
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #0a0f1a;
+  color: #e6edf3;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* HEADER */
+/* ==== ENCABEZADO ==== */
 .site-header {
-  background: linear-gradient(90deg, #161b22 0%, #1f2430 40%, #2a1f47 100%);
-  color: var(--text);
-  box-shadow: 0 4px 12px rgba(179, 136, 255, 0.2);
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #e6edf3;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 .site-header h1 {
-  color: var(--accent-2);
-  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #00ffff;
 }
 
 .site-header p {
-  color: var(--muted);
+  color: #b0c7d8;
+  font-size: 1.1rem;
 }
 
-/* NAV */
+/* ==== NAVEGACIÓN ==== */
 .site-nav {
-  background-color: var(--panel);
-  border-bottom: 1px solid var(--card-border);
+  background-color: #111827;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 .site-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  margin: 0 12px;
-  padding: 10px 6px;
-  display: inline-block;
+  color: #e6edf3;
   font-weight: 500;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: all 0.3s ease;
 }
 
 .site-nav a:hover {
-  color: var(--accent-2);
-  text-shadow: 0 0 8px var(--accent-2);
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
 }
 
-/* TITULOS */
+/* ==== TÍTULOS ==== */
 h2 {
-  color: var(--accent-2);
-  font-weight: 700;
-  border-left: 6px solid var(--accent);
-  padding-left: 12px;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.35rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00bfff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 12px rgba(0, 191, 255, 0.4);
 }
 
-h2::first-letter {
-  color: var(--accent);
-}
-
-/* CARDS */
+/* ==== TARJETAS ==== */
 .card {
-  background-color: var(--panel);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  color: var(--text);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: #141c2e;
+  color: #e6edf3;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px var(--glow);
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
 }
 
 .card-title {
-  color: var(--accent);
-  font-weight: 600;
+  color: #00bfff;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .card-text {
-  color: var(--text);
   font-size: 0.95rem;
+  color: #cfd9e6;
 }
 
-/* FOOTER */
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+/* ==== SECCIONES ==== */
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ==== FOOTER ==== */
 .site-footer {
-  background-color: var(--panel);
-  color: var(--muted);
-  border-top: 1px solid var(--card-border);
+  background-color: #0d1117;
+  color: #b0c7d8;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 255, 255, 0.15);
 }
 
-/* RESPONSIVE */
+/* ==== EFECTO DE BRILLO EN TEXTO ==== */
+.glow-text {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00cccc, 0 0 40px #00bfff;
+}
+
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-  h2 {
-    font-size: 1.15rem;
+  .site-header h1 {
+    font-size: 2rem;
   }
+
+  .site-header p {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
   .site-nav a {
-    margin: 6px;
+    display: block;
+    margin: 8px 0;
   }
 }
